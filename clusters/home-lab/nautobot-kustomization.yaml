@@ -5,10 +5,10 @@ metadata:
   name: nautobot-kustomize
   namespace: flux-system
 spec:
-  interval: 5m0s
+  interval: 1m0s
   path: ./kustomize
   prune: true
   sourceRef:
     kind: GitRepository
     name: nautobot
-  targetNamespace: default
+  targetNamespace: nautobot-flux
