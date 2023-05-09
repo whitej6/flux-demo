@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/whitej6/flux-demo.git
+  url: ssh://git@github.com/whitej6/flux-demo
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
