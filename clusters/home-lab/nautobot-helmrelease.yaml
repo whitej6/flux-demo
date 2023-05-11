@@ -1,0 +1,19 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: nautobot-helm
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: nautobot
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: nautobot-helm
+  interval: 1m0s
+  targetNamespace: nautobot-helm
+  valuesFrom:
+  - kind: ConfigMap
+    name: nautobot-helm
