@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: nautobot-helm
-        namespace: flux-system
+        valuesKey: nautobot.yaml
   interval: 1m0s
   targetNamespace: nautobot-helm
   valuesFrom:
