@@ -10,7 +10,7 @@ spec:
       chart: nautobot
       reconcileStrategy: ChartVersion
       sourceRef:
-        kind: HelmRepository
+        kind: GitRepository
         name: nautobot-helm
   interval: 1m0s
   install:
