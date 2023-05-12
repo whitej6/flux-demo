@@ -1,9 +1,11 @@
 ---
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
 metadata:
   name: nautobot-helm
   namespace: flux-system
 spec:
-  interval: 1m0s
-  url: https://nautobot.github.io/helm-charts/
+  interval: 30s
+  ref:
+    branch: fix/helm-chart-db-keys
+  url: https://github.com/BlackDark/helm-charts.git
